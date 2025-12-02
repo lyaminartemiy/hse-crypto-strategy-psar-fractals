@@ -308,7 +308,7 @@ class StrategyVisualizer:
         )
 
         # График 2.2: Детализация последних сделок
-        detail_start = df_test.index[-60] if len(df_test) > 60 else df_test.index[0]
+        detail_start = df_test.index[-500] if len(df_test) > 500 else df_test.index[0]
         df_detail = df_test[df_test.index >= detail_start].copy()
 
         ax2.plot(
